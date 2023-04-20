@@ -17,11 +17,11 @@ spring:
            - id: ACCOUNT-CREATION-FORM
              uri: lb://ACCOUNT-CREATION-FORM
              predicates:
-                  - Path=/bank2/**
+                  - Path=/bank/**
            - id: BANK-BALANCE-CHECK-FORM
              uri: lb://BANK-BALANCE-CHECK-FORM
              predicates:
-                  - Path=/bank3/**
+                  - Path=/bank/**
            - id: BANK-CREATION-FORM
              uri: lb://BANK-CREATION-FORM
              predicates:
@@ -29,11 +29,11 @@ spring:
            - id: FETCH-CUSTOMER-DETAILS-SERVICE
              uri: lb://FETCH-CUSTOMER-DETAILS-SERVICE
              predicates:
-                  - Path=/bank4/**
+                  - Path=/bank/**
            - id: TRANSACTION-FORM
              uri: lb://TRANSACTION-FORM
              predicates:
-                  - Path=/bank3/**
+                  - Path=/bank/**
 eureka:
   client:
     service-url:
