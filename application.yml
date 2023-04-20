@@ -11,9 +11,29 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-
-
-         
+  cloud:
+      gateway:
+        routes:
+           - id: ACCOUNT-CREATION-FORM
+             uri: lb://ACCOUNT-CREATION-FORM
+             predicates:
+                  - Path=/bank/**
+           - id: BANK-BALANCE-CHECK-FORM
+             uri: lb://BANK-BALANCE-CHECK-FORM
+             predicates:
+                  - Path=/bank/**
+          - id: BANK-CREATION-FORM
+             uri: lb://BANK-CREATION-FORM
+             predicates:
+                  - Path=/bank/**
+          - id: FETCH-CUSTOMER-DETAILS-SERVICE
+             uri: lb://FETCH-CUSTOMER-DETAILS-SERVICE
+             predicates:
+                  - Path=/bank/**
+         - id: TRANSACTION-FORM
+             uri: lb://TRANSACTION-FORM
+             predicates:
+                  - Path=/bank/**
 eureka:
   client:
     service-url:
