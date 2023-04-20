@@ -22,15 +22,15 @@ spring:
              uri: lb://BANK-BALANCE-CHECK-FORM
              predicates:
                   - Path=/bank3/**
-          - id: BANK-CREATION-FORM
+           - id: BANK-CREATION-FORM
              uri: lb://BANK-CREATION-FORM
              predicates:
                   - Path=/bank/**
-          - id: FETCH-CUSTOMER-DETAILS-SERVICE
+           - id: FETCH-CUSTOMER-DETAILS-SERVICE
              uri: lb://FETCH-CUSTOMER-DETAILS-SERVICE
              predicates:
                   - Path=/bank4/**
-         - id: TRANSACTION-FORM
+           - id: TRANSACTION-FORM
              uri: lb://TRANSACTION-FORM
              predicates:
                   - Path=/bank3/**
